@@ -140,8 +140,9 @@ function SpinPick() {
     timers.current.push(
       window.setTimeout(() => {
         setSpinning(false);
-        const value = choices[index];
+        const value = choices[index] ?? "";
         setWinner(value);
+
         setHistory((h) =>
           [
             {
